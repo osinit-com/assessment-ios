@@ -1,0 +1,57 @@
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+.idea
+.DS_Store
+/.idea/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+lor
+build/reports/tests.html
+.DS_Store
+R.generated.swift
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+
+
+# Swift Package Manager
+#
+.build/
+
+# CocoaPods
+#Pods/
+Pods/Pods.xcodeproj/xcuserdata/*
+
+#
+# Add this line if you want to avoid checking in source code from the Xcode workspace
+# *.xcworkspace
+RenCredit.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+RenCredit.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+
+# Carthage
+#
+Carthage/Build
