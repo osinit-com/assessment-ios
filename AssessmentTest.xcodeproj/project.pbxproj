@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		193C17682527354200FB9DDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193C17672527354200FB9DDB /* AppDelegate.swift */; };
 		193C176A2527354200FB9DDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193C17692527354200FB9DDB /* SceneDelegate.swift */; };
-		193C176C2527354200FB9DDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193C176B2527354200FB9DDB /* ViewController.swift */; };
+		193C176C2527354200FB9DDB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193C176B2527354200FB9DDB /* MainViewController.swift */; };
 		193C176F2527354200FB9DDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 193C176D2527354200FB9DDB /* Main.storyboard */; };
 		193C17722527354200FB9DDB /* AssessmentTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 193C17702527354200FB9DDB /* AssessmentTest.xcdatamodeld */; };
 		193C17742527354400FB9DDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 193C17732527354400FB9DDB /* Assets.xcassets */; };
 		193C17772527354400FB9DDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 193C17752527354400FB9DDB /* LaunchScreen.storyboard */; };
 		193C17822527354400FB9DDB /* AssessmentTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193C17812527354400FB9DDB /* AssessmentTestTests.swift */; };
+		193C178D25275B4C00FB9DDB /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193C178C25275B4C00FB9DDB /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +32,7 @@
 		193C17642527354200FB9DDB /* AssessmentTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssessmentTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		193C17672527354200FB9DDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		193C17692527354200FB9DDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		193C176B2527354200FB9DDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		193C176B2527354200FB9DDB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		193C176E2527354200FB9DDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		193C17712527354200FB9DDB /* AssessmentTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AssessmentTest.xcdatamodel; sourceTree = "<group>"; };
 		193C17732527354400FB9DDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		193C177D2527354400FB9DDB /* AssessmentTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssessmentTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		193C17812527354400FB9DDB /* AssessmentTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentTestTests.swift; sourceTree = "<group>"; };
 		193C17832527354400FB9DDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		193C178C25275B4C00FB9DDB /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +85,8 @@
 			children = (
 				193C17672527354200FB9DDB /* AppDelegate.swift */,
 				193C17692527354200FB9DDB /* SceneDelegate.swift */,
-				193C176B2527354200FB9DDB /* ViewController.swift */,
+				193C176B2527354200FB9DDB /* MainViewController.swift */,
+				193C178C25275B4C00FB9DDB /* EditViewController.swift */,
 				193C176D2527354200FB9DDB /* Main.storyboard */,
 				193C17732527354400FB9DDB /* Assets.xcassets */,
 				193C17752527354400FB9DDB /* LaunchScreen.storyboard */,
@@ -203,7 +206,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				193C176C2527354200FB9DDB /* ViewController.swift in Sources */,
+				193C178D25275B4C00FB9DDB /* EditViewController.swift in Sources */,
+				193C176C2527354200FB9DDB /* MainViewController.swift in Sources */,
 				193C17722527354200FB9DDB /* AssessmentTest.xcdatamodeld in Sources */,
 				193C17682527354200FB9DDB /* AppDelegate.swift in Sources */,
 				193C176A2527354200FB9DDB /* SceneDelegate.swift in Sources */,
