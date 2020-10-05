@@ -24,20 +24,40 @@ class EditViewController: UIViewController {
     
     @IBAction func onClick(_ sender: Any) {
         
-        if notice != nil {
-            notice?.noticeTitle = edit1.text
-            notice?.noticeText = edit2.text
-            (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            navigationController?.popViewController(animated: true)
-        } else {
-        
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            let ent = NSEntityDescription.insertNewObject(forEntityName: "Notices", into: context) as! Notices
-            ent.noticeTitle = edit1.text
-            ent.noticeText = edit2.text
-            (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            navigationController?.popViewController(animated: true)
-        }
+        let activityView = UIView(frame: view.bounds)
+        activityView.backgroundColor = UIColor.gray.withAlphaComponent(0.6)
+        let activity = UIActivityIndicatorView(style: .large)
+        activityView.addSubview(activity)
+        activity.center = activityView.center
+        view.addSubview(activityView)
+        activity.startAnimating()
+
+        var uC = URLComponents(string: "https://www.purgomalum.com/service/plain")
+        let qi = URLQueryItem(name: "text", value: edit2.text)
+        uC?.queryItems = [qi]
+        URLSession.shared.dataTask(with: uC!.url!) { (data: Data?, response: URLResponse?, error) in
+            DispatchQueue.main.async {
+                activityView.removeFromSuperview()
+                if error == nil {
+                    let str = String(data: data!, encoding: .utf8)
+                    if self.notice != nil {
+                        self.notice?.noticeTitle = self.edit1.text
+                        self.notice?.noticeText = str
+                        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                        self.navigationController?.popViewController(animated: true)
+                    } else {
+                    
+                        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                        let ent = NSEntityDescription.insertNewObject(forEntityName: "Notices", into: context) as! Notices
+                        ent.noticeTitle = self.edit1.text
+                        ent.noticeText = str
+                        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                }
+
+            }
+        }.resume()
     }
     
 }
