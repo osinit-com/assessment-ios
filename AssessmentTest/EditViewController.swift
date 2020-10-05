@@ -54,6 +54,13 @@ class EditViewController: UIViewController {
                         (UIApplication.shared.delegate as! AppDelegate).saveContext()
                         self.navigationController?.popViewController(animated: true)
                     }
+                } else {
+                    let ac = UIAlertController(title: "Ошибка", message: "Ошибка валидации данных", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "OK", style: .cancel) { (_) in
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                    ac.addAction(action)
+                    self.present(ac, animated: true, completion: nil)
                 }
 
             }
